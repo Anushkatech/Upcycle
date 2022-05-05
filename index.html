@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style - Copy.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Upcycle Your Belongings</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -48,11 +50,11 @@
                 <p>Upcycle is the landing page you wish you have when you think sbout throwing something out</p>
                 <div class="container">
                     <!--Container Open-->
-                    <div class="panel active"
-                        style="background-image: url(Upcycle/Upcycle_product1.jpg);">
-                        <<b>
-                            <h3> Upcycled Jeans</h3></b>
-                            <!--Panel Active Open-->
+                    <div class="panel active" style="background-image: url(Upcycle/Upcycle_product1.jpg);">
+                        <b>
+                            <h3> Upcycled Jeans</h3>
+                        </b>
+                        <!--Panel Active Open-->
                     </div>
                     <!--Panel Active Close-->
                     <div class="panel" style="background-image: url(Upcycle/Upcycle_product2.jpg);">
@@ -92,7 +94,7 @@
                         <h6>SIGN UP FOR A BETTER TOMMOROW</h6>
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
-                        <button style="trial" type="submit" value="submit" onClick="openModal()">Start Your
+                        <button type="submit" value="submit" onClick="openModal()">Start Your
                             Journey</button>
                     </form>
                 </div>
@@ -211,7 +213,7 @@
                         <div class="col-1">
                             <h1 class="action-title">What are you waiting for?</h1>
                             <p>Get started today and help building a better future </p>
-                            <p style="text-align"><a href="#" class="signupBTN">Contact Today</a></p>
+                            <p style="text-align: center"><a href="#" class="signupBTN">Contact Today</a></p>
                         </div>
                     </div>
                 </div><!-- End call-to-action -->
@@ -230,7 +232,7 @@
                             <h6>SIGN UP FOR BEING UPCYCLED</h6>
                             <input type="text" name="name" placeholder="Name"><br>
                             <input type="email" name="email" placeholder="Email"><br>
-                            <button style="trial" type="submit" value="submit" onClick="openModal()">Start Your
+                            <button type="submit" value="submit" onClick="openModal()">Start Your
                                 Journey</button>
                             <p style="font-size:11px;">* We don’t share your personal info with anyone. Check out our <a
                                     href="#">Privacy Policy</a> for more information.</p>
@@ -269,30 +271,37 @@
                         <h2>Get Started With Your Journey</h2>
                     </div>
                     <div class="modal-body">
-                        <form class="details-form">
-                            <input type="text" name="name" placeholder="Name"><br>
-                            <input type="email" name="email" placeholder="Email"><br>
-                            <input type="number" name="number" placeholder="Mobile Number"><br>
+                        <form class="details-form" id="register-form">
+                            <input type="text" name="name" required placeholder="Name"><br>
+                            <input type="email" name="email" required placeholder="Email"><br>
+                            <input type="number" name="number" required placeholder="Mobile Number"><br>
                             <input type="text" name="address" placeholder="Address"><br>
-                            <input type="checkbox" id="Jeans" name="Jeans" value="Jeans">
-                            <label for="Jeans"> Jeans</label><br>
-                            <input type ="number" name="quantity" placeholder="Quantity"><br>
-                            <input type="checkbox" id="Plastic" name="Plastic" value="Plastic">
-                            <label for="Plastic"> Plastic Bottles</label><br>
-                            <input type ="number" name="quantity" placeholder="Quantity"><br>
-                            <input type="checkbox" id="Furniture" name="Furniture" value="Furniture">
-                            <label for="Furniture">Furniture</label>
-                            <input type="radio" id="Furniture" name="Chair" value="Chair" checked>
-                            <label for="Furniture">Chair</label><br>
-                            <input type="radio" id="Furniture" name="Door" value="Door">
-                            <label for="Furniture">Door</label><br>
-                            <input type ="number" name="quantity" placeholder="Quantity"><br>
+                            <!-- <input type="checkbox" id="Jeans" name="Jeans" value="Jeans"> -->
+                            <div class="form-input">
+                                <label for="Jeans"> Jeans</label><br>
+                                <input type="number" name="jeans" placeholder="Quantity"><br>
+                            </div>
+                            <div class="form-input">
+                                <label for="Plastic"> Plastic Bottles</label><br>
+                                <input type="number" name="bottles" placeholder="Quantity"><br>
+                            </div>
+                            <!-- <input type="checkbox" id="Plastic" name="Plastic" value="Plastic"> -->
 
+                            <!-- <input type="checkbox" id="Furniture" name="Furniture" value="Furniture"> -->
+                            <div class="form-input">
+                                <label for="Furniture">Furniture</label>
+                                <input type="radio" class="radio-buttons" id="Furniture" name="furniture" value="Chair" checked="true">
+                                <label for="Furniture">Chair</label><br>
+                                <input type="radio" class="radio-buttons" id="Furniture" name="furniture" value="Door">
+                                <label for="Furniture">Door</label><br>
+                            </div>
+                            <input type="number" name="furniture_qty" placeholder="Quantity"><br>
+                            <input type="submit" value="Submit">
                         </form>
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                         <h3>Modal Footer</h3>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
